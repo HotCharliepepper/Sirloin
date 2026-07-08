@@ -817,6 +817,114 @@ h1{
   }
 }
 
+
+/* Click Navigation Controls */
+.slide-controls{
+  position:fixed;
+  right:26px;
+  bottom:26px;
+  z-index:10000;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  background:rgba(21,35,31,.78);
+  border:1px solid rgba(209,170,85,.32);
+  border-radius:999px;
+  box-shadow:0 18px 46px rgba(0,0,0,.26);
+  backdrop-filter:blur(10px);
+}
+.slide-btn{
+  appearance:none;
+  border:1px solid rgba(255,248,232,.18);
+  background:rgba(255,248,232,.08);
+  color:#fff8e8;
+  min-width:92px;
+  height:40px;
+  padding:0 16px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:-.02em;
+  cursor:pointer;
+  transition:background .24s ease, transform .24s ease, opacity .24s ease;
+}
+.slide-btn:hover{
+  background:rgba(209,170,85,.22);
+  transform:translateY(-1px);
+}
+.slide-btn:disabled{
+  opacity:.35;
+  cursor:not-allowed;
+  transform:none;
+}
+.slide-count{
+  color:#d1aa55;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  min-width:54px;
+  text-align:center;
+}
+.page-next{
+  position:absolute;
+  right:52px;
+  bottom:88px;
+  z-index:3;
+  appearance:none;
+  border:1px solid rgba(164,122,51,.38);
+  background:rgba(251,245,230,.78);
+  color:var(--anchor);
+  padding:11px 16px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:-.02em;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(21,35,31,.09);
+  transition:background .24s ease, color .24s ease, transform .24s ease;
+}
+.page-next:hover{
+  background:var(--anchor);
+  color:#fff8e8;
+  transform:translateY(-1px);
+}
+.page:last-of-type .page-next{
+  display:none;
+}
+
+.slide-btn.fullscreen{
+  min-width:106px;
+  background:rgba(209,170,85,.16);
+  border-color:rgba(209,170,85,.38);
+}
+.slide-btn.fullscreen:hover{
+  background:rgba(209,170,85,.30);
+}
+
+@media(max-width:940px){
+  .slide-controls{
+    right:14px;
+    left:14px;
+    bottom:14px;
+    justify-content:space-between;
+  }
+  .slide-btn{
+    min-width:78px;
+    padding:0 12px;
+  }
+  .page-next{
+    display:none;
+  }
+}
+@media print{
+  .slide-controls,
+  .page-next{
+    display:none !important;
+  }
+}
+
 </style>
 </head>
 <body>
