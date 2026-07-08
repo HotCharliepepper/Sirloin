@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>청담유통 × We,Place. 로드맵 </title>
+  <title>WEPLACE × 청담유통 백업용 5P 이미지 삽입본</title>
   <style>
 :root{
   --outer:#202521;
@@ -635,6 +635,185 @@ h1{
   }
   .closing-sentence{
     font-size:36px;
+  }
+}
+
+
+/* Motion Layer v1 — quiet focus transitions */
+@media screen and (min-width: 941px){
+  html.motion-ready{
+    scroll-snap-type:y mandatory;
+    scroll-padding-top:24px;
+  }
+  html.motion-ready .page{
+    scroll-snap-align:start;
+  }
+}
+@media screen{
+  .motion-layer{
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(circle at 70% 22%, rgba(164,122,51,.16), transparent 28%),
+      linear-gradient(135deg, rgba(21,35,31,.96), rgba(29,44,39,.94));
+    z-index:9999;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .42s ease;
+  }
+  .motion-layer.active{
+    opacity:.92;
+  }
+
+  html.motion-ready .page{
+    opacity:0;
+    transform:translateY(18px) scale(.992);
+    filter:saturate(.92);
+    transition:
+      opacity .78s cubic-bezier(.2,.72,.18,1),
+      transform .78s cubic-bezier(.2,.72,.18,1),
+      filter .78s cubic-bezier(.2,.72,.18,1);
+    will-change:opacity, transform, filter;
+  }
+  html.motion-ready .page.is-visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:saturate(1);
+  }
+
+  html.motion-ready .page .caption,
+  html.motion-ready .page h1,
+  html.motion-ready .page .lead,
+  html.motion-ready .page .question-box,
+  html.motion-ready .page .closing-sentence{
+    opacity:0;
+    transform:translateY(14px);
+    transition:
+      opacity .78s cubic-bezier(.2,.72,.18,1),
+      transform .78s cubic-bezier(.2,.72,.18,1);
+  }
+  html.motion-ready .page.is-visible .caption{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.08s;
+  }
+  html.motion-ready .page.is-visible h1{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.16s;
+  }
+  html.motion-ready .page.is-visible .lead{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.26s;
+  }
+  html.motion-ready .page.is-visible .question-box{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.34s;
+  }
+
+  html.motion-ready .journey-labels:before{
+    transform-origin:left center;
+    transform:scaleX(0);
+    transition:transform 1.45s cubic-bezier(.18,.84,.18,1);
+  }
+  html.motion-ready .page.is-visible .journey-labels:before{
+    transform:scaleX(1);
+    transition-delay:.38s;
+  }
+  html.motion-ready .journey-step .journey-dot{
+    transform:scale(.82);
+    opacity:.42;
+    transition:
+      transform .58s cubic-bezier(.2,.72,.18,1),
+      opacity .58s cubic-bezier(.2,.72,.18,1);
+  }
+  html.motion-ready .page.is-visible .journey-step .journey-dot{
+    transform:scale(1);
+    opacity:1;
+  }
+  html.motion-ready .page.is-visible .journey-step:nth-child(1) .journey-dot{transition-delay:.48s}
+  html.motion-ready .page.is-visible .journey-step:nth-child(2) .journey-dot{transition-delay:.58s}
+  html.motion-ready .page.is-visible .journey-step:nth-child(3) .journey-dot{transition-delay:.68s}
+  html.motion-ready .page.is-visible .journey-step:nth-child(4) .journey-dot{transition-delay:.78s}
+  html.motion-ready .page.is-visible .journey-step:nth-child(5) .journey-dot{transition-delay:.88s}
+  html.motion-ready .page.is-visible .journey-step:nth-child(6) .journey-dot{transition-delay:.98s}
+  html.motion-ready .page.is-visible .journey-step:nth-child(7) .journey-dot{transition-delay:1.08s}
+
+  html.motion-ready .closing-sentence{
+    transition-duration:1.08s;
+    transition-delay:.28s;
+  }
+  html.motion-ready .page.is-visible .closing-sentence{
+    opacity:1;
+    transform:translateY(0);
+  }
+  html.motion-ready .page.is-visible .closing-sentence span{
+    animation:brassFocus 2.6s ease .92s 1 both;
+  }
+  @keyframes brassFocus{
+    0%{text-shadow:none; color:var(--accent)}
+    38%{text-shadow:0 0 18px rgba(164,122,51,.24); color:#b88b42}
+    100%{text-shadow:none; color:var(--accent)}
+  }
+
+  .nav-meta span:last-child{
+    position:relative;
+  }
+  .nav-meta span:last-child:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-9px;
+    height:1px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform .72s cubic-bezier(.2,.72,.18,1);
+  }
+  .page.is-visible .nav-meta span:last-child:after{
+    transform:scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html.motion-ready{
+    scroll-snap-type:none;
+  }
+  html.motion-ready .page,
+  html.motion-ready .page .caption,
+  html.motion-ready .page h1,
+  html.motion-ready .page .lead,
+  html.motion-ready .page .question-box,
+  html.motion-ready .page .closing-sentence,
+  html.motion-ready .journey-labels:before,
+  html.motion-ready .journey-step .journey-dot{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    transition:none !important;
+    animation:none !important;
+  }
+  .motion-layer{display:none}
+}
+
+@media print{
+  .motion-layer{display:none !important}
+  html.motion-ready .page,
+  html.motion-ready .page .caption,
+  html.motion-ready .page h1,
+  html.motion-ready .page .lead,
+  html.motion-ready .page .question-box,
+  html.motion-ready .page .closing-sentence,
+  html.motion-ready .journey-labels:before,
+  html.motion-ready .journey-step .journey-dot{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    transition:none !important;
+    animation:none !important;
   }
 }
 
