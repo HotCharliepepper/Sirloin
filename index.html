@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WEPLACE × 청담유통 백업용 5P 이미지 삽입본</title>
+  <style>
+:root{
+  --outer:#202521;
+  --outer-dot:rgba(255,255,255,.15);
+  --field:#fbf5e6;
+  --field-2:#fff8e9;
+  --surface:#eae2cf;
+  --surface-2:#f2ead8;
+  --anchor:#15231f;
+  --anchor-2:#1d2c27;
+  --anchor-soft:#53625b;
+  --accent:#a47a33;
+  --accent-soft:#c4a263;
+  --ink:#151914;
+  --muted:#6e7168;
+  --line:#ded4bf;
+  --shadow:0 28px 80px rgba(0,0,0,.32);
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 1px 1px, var(--outer-dot) 1px, transparent 0) 0 0/24px 24px,
+    linear-gradient(180deg,#222823 0%, var(--outer) 100%);
+  color:var(--ink);
+  font-family:Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height:1.56;
+  letter-spacing:-.035em;
+  word-break:keep-all;
+}
+.wrap{width:min(1180px, calc(100% - 28px)); margin:24px auto 80px}
+.toolbar{display:flex; justify-content:flex-end; gap:10px; margin-bottom:14px}
+.btn{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+  color:#fbf5e6;
+  padding:10px 15px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:850;
+  cursor:pointer;
+  backdrop-filter:blur(8px);
+}
+.page{
+  width:100%;
+  min-height:840px;
+  background:
+    radial-gradient(circle at 85% 8%, rgba(164,122,51,.07), transparent 28%),
+    linear-gradient(180deg,var(--field) 0%, var(--field-2) 100%);
+  border:1px solid rgba(222,212,191,.95);
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin-bottom:30px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  page-break-after:always;
+  position:relative;
+}
+.page:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border:1px solid rgba(255,255,255,.52);
+  border-radius:var(--radius);
+}
+.nav{
+  height:64px;
+  border-bottom:1px solid rgba(222,212,191,.92);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 52px;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#76786e;
+  position:relative;
+  z-index:1;
+}
+.brand{
+  font-family:Georgia, "Times New Roman", serif;
+  color:#2f3d37;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.nav-meta{display:flex; gap:30px; align-items:center; font-weight:850}
+.content{flex:1; padding:52px 70px 64px; position:relative; z-index:1}
+.footer{
+  height:66px;
+  background:var(--anchor-soft);
+  color:#fff8e8;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 52px;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  position:relative;
+  z-index:1;
+}
+.footer .brand-small{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+.caption{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:950;
+  margin-bottom:14px;
+}
+h1{
+  margin:0;
+  font-size:54px;
+  line-height:1.08;
+  letter-spacing:-.072em;
+  font-weight:950;
+  color:var(--ink);
+}
+.lead{
+  margin:18px 0 0;
+  color:var(--muted);
+  font-size:16.5px;
+  line-height:1.78;
+  max-width:720px;
+  letter-spacing:-.025em;
+}
+.gold{color:#d1aa55; font-weight:950}
+.img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.92) contrast(1.02)}
+.image-frame{
+  border:1px solid rgba(164,122,51,.32);
+  background:#eadfca;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 18px 42px rgba(20,25,20,.16);
+}
+.image-frame:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,.26));
+  pointer-events:none;
+}
+.img-label{
+  position:absolute;
+  left:14px; bottom:12px;
+  z-index:2;
+  color:#fff8e8;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:950;
+  text-shadow:0 1px 10px rgba(0,0,0,.55);
+}
+.dark-hero{
+  background:
+    radial-gradient(circle at 93% 85%, rgba(164,122,51,.16), transparent 0 19%, transparent 20%),
+    linear-gradient(135deg,var(--anchor) 0%, var(--anchor-2) 100%);
+  color:#fff8e8;
+  padding:44px 48px;
+  min-height:304px;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:34px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:28px;
+  border:1px solid rgba(21,35,31,.8);
+  box-shadow:inset 0 0 0 1px rgba(255,248,231,.045);
+}
+.dark-hero:before{
+  content:"";
+  position:absolute; left:0; top:0;
+  width:5px; height:100%;
+  background:linear-gradient(180deg,var(--accent),rgba(164,122,51,.16));
+}
+.dark-hero h1{color:#fff8e8; max-width:660px}
+.dark-hero .lead{color:#d9dfda; margin-top:18px; font-size:16px; position:relative; z-index:1}
+.hero-photo{height:236px; border-radius:4px}
+.hero-copy{position:relative; z-index:1}
+.grid-4{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.work-card{
+  background:linear-gradient(180deg,var(--surface) 0%, #e8dfca 100%);
+  border:1px solid #d8cfba;
+  padding:22px 24px;
+  min-height:124px;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.32);
+}
+.num{color:var(--accent); font-size:13px; font-weight:950; letter-spacing:.08em; min-width:34px; padding-top:2px}
+.work-card h3{margin:0 0 8px; font-size:19px; line-height:1.25; letter-spacing:-.048em; color:#252821}
+.work-card p{margin:0; color:#686a61; font-size:13.5px; line-height:1.62}
+.proof-lane{
+  margin:24px auto 0;
+  max-width:880px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  position:relative;
+  padding:18px 0 10px;
+}
+.proof-lane:before{
+  content:"";
+  position:absolute;
+  left:11%; right:11%; top:27px;
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#d7c9ad 0%,#b08a3e 45%,#53625b 100%);
+}
+.proof-step{position:relative; text-align:center; z-index:1; display:flex; flex-direction:column; align-items:center; gap:10px; color:#545850; font-size:13px; font-weight:900}
+.proof-dot{width:20px; height:20px; border-radius:50%; background:var(--field); border:5px solid #d7c9ad}
+.proof-step:last-child .proof-dot{width:26px; height:26px; margin-top:-3px; border-color:var(--anchor); background:var(--anchor); box-shadow:0 0 0 8px rgba(164,122,51,.12)}
+.note{
+  margin:18px auto 0;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  max-width:760px;
+  text-align:center;
+  color:#666960;
+  font-size:13.5px;
+  line-height:1.72;
+  font-style:italic;
+}
+.center-page{display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:flex-start; padding-top:0}
+.center-page h1{max-width:850px; font-size:54px}
+.center-page .lead{text-align:center; margin-top:18px; font-size:16.5px}
+.journey-panel{
+  width:100%;
+  max-width:980px;
+  margin:38px auto 24px;
+  padding:28px 26px 24px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,#f7f0df 0%,#f0e7d2 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45);
+  position:relative;
+  overflow:hidden;
+}
+.journey-visuals{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+  margin-bottom:26px;
+}
+.journey-visual{
+  height:118px;
+  border-radius:3px;
+}
+.journey-labels{display:grid; grid-template-columns:repeat(7,1fr); gap:0; position:relative}
+.journey-labels:before{
+  content:"";
+  position:absolute;
+  left:6%; right:6%; top:25px;
+  height:7px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#d5c8ad 0%, #c7aa70 44%, #53625b 100%);
+  z-index:0;
+}
+.journey-step{position:relative; z-index:1; text-align:center; display:flex; flex-direction:column; align-items:center; min-height:104px}
+.journey-dot{width:24px; height:24px; border-radius:50%; background:var(--field); border:5px solid #d4c6ad; margin:14px 0 15px}
+.journey-step.final .journey-dot{width:34px; height:34px; margin:9px 0 10px; background:var(--anchor); border-color:var(--anchor); box-shadow:0 0 0 8px rgba(164,122,51,.14)}
+.journey-step strong{display:block; font-size:12px; font-weight:950; color:#363a34; line-height:1.25}
+.journey-step.final strong{color:var(--anchor); font-size:13px}
+.journey-step span{display:block; margin-top:8px; color:#74766e; font-size:11.5px; font-weight:800; line-height:1.35; min-height:30px}
+.journey-arrow{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:10px; color:#6f7169; font-size:11px; font-weight:850; letter-spacing:.04em; text-transform:uppercase}
+.journey-arrow:before,.journey-arrow:after{content:""; height:1px; background:var(--line); flex:1}
+.philosophy-copy{max-width:680px; margin:0 auto; color:#62655d; line-height:1.85; font-size:14.5px; text-align:center}
+.philosophy-copy strong{color:#30342e}
+.decision-wrap{text-align:center; padding-top:0}
+.decision-wrap h1{max-width:800px; margin:0 auto; font-size:50px; line-height:1.12}
+.underline{width:52px; height:1px; background:var(--accent); margin:22px auto 30px}
+.decision-grid{display:grid; grid-template-columns:1fr 70px 1fr; gap:18px; max-width:930px; margin:0 auto 24px; text-align:left; align-items:stretch}
+.decision-card{
+  min-height:204px;
+  padding:30px 32px;
+  border:1px solid var(--line);
+  background:radial-gradient(circle at 90% 15%, rgba(164,122,51,.09), transparent 30%), #f5eedc;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.decision-card.dark{
+  background:radial-gradient(circle at 92% 18%, rgba(164,122,51,.12), transparent 32%), linear-gradient(135deg,var(--anchor) 0%, var(--anchor-2) 100%);
+  color:#fff8e8;
+  border-color:rgba(21,35,31,.9);
+}
+.decision-card .label{font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:950; margin-bottom:14px}
+.decision-card.dark .label{color:#d1aa55}
+.decision-card h2{margin:0; font-size:33px; line-height:1.15; letter-spacing:-.06em}
+.decision-card p{margin:24px 0 0; padding-top:18px; border-top:1px solid rgba(164,122,51,.35); color:#666961; font-size:14.5px; line-height:1.7}
+.decision-card.dark p{color:#d9dfda}
+.versus{display:flex; align-items:center; justify-content:center; color:var(--accent); font-family:Georgia, "Times New Roman", serif; font-size:26px; font-style:italic}
+.brand-strip{
+  max-width:930px;
+  margin:0 auto 22px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.brand-card{
+  height:118px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(164,122,51,.25);
+  background:#e9dfcb;
+}
+.brand-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, rgba(21,35,31,.72), rgba(21,35,31,.10));
+}
+.brand-card img{width:100%; height:100%; object-fit:cover; display:block}
+.brand-card span{
+  position:absolute;
+  left:16px; bottom:14px;
+  z-index:2;
+  color:#fff8e8;
+  font-size:16px;
+  font-weight:950;
+  letter-spacing:-.04em;
+}
+.question-box{
+  max-width:790px;
+  margin:0 auto;
+  padding:26px 38px;
+  background:linear-gradient(180deg,#f3ebd8 0%, #eee4cf 100%);
+  border:1px solid #ddd2bc;
+  text-align:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45);
+}
+.question-box p{margin:0; color:#42463f; font-size:21px; line-height:1.52; font-weight:850; font-style:italic; letter-spacing:-.045em}
+.strategy-note{max-width:740px; margin:18px auto 0; color:#5d615a; font-size:13.5px; line-height:1.65; text-align:center; font-weight:780}
+.split-head{display:grid; grid-template-columns:.9fr 1.1fr; gap:36px; align-items:end; margin-bottom:28px}
+.split-head h1{font-size:49px; max-width:520px}
+.split-head .lead{margin:0; max-width:520px; color:#5f625a}
+.cobuild-photo-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-bottom:18px;
+}
+.micro-photo{
+  height:92px;
+  overflow:hidden;
+  border:1px solid rgba(164,122,51,.26);
+  background:#e8dfca;
+  position:relative;
+}
+.micro-photo img{width:100%; height:100%; object-fit:cover; display:block}
+.micro-photo span{
+  position:absolute; left:9px; bottom:8px;
+  color:#fff8e8; font-size:9px; letter-spacing:.1em; text-transform:uppercase; font-weight:950;
+  text-shadow:0 1px 8px rgba(0,0,0,.75);
+}
+.cobuild-wrap{display:grid; grid-template-columns:1fr 80px 1fr; gap:18px; align-items:stretch; margin-bottom:20px}
+.column-card{
+  border:1px solid var(--line);
+  background:#f4ecda;
+  min-height:315px;
+  padding:26px;
+  position:relative;
+  overflow:hidden;
+}
+.column-card.dark{
+  background:radial-gradient(circle at 92% 12%, rgba(164,122,51,.10), transparent 34%), linear-gradient(135deg,var(--anchor) 0%, var(--anchor-2) 100%);
+  color:#fff8e8;
+  border-color:rgba(21,35,31,.8);
+}
+.column-card .label{font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:950; margin-bottom:14px}
+.column-card.dark .label{color:#d1aa55}
+.column-card h2{margin:0 0 18px; font-size:30px; line-height:1.15; letter-spacing:-.055em}
+.list{display:grid; gap:10px}
+.list-item{display:flex; gap:10px; align-items:flex-start; padding-bottom:10px; border-bottom:1px solid rgba(164,122,51,.18); font-size:13.5px; color:#575a53; line-height:1.5; font-weight:760}
+.column-card.dark .list-item{color:#d8dfd9; border-bottom-color:rgba(255,248,231,.12)}
+.bullet{width:7px; height:7px; border-radius:50%; background:var(--accent); margin-top:7px; flex:0 0 auto}
+.bridge-axis{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; color:var(--accent); font-weight:950}
+.bridge-axis .line{width:1px; flex:1; background:linear-gradient(180deg,transparent,var(--accent),transparent)}
+.bridge-axis .circle{width:68px; height:68px; border-radius:50%; background:var(--field); border:1px solid rgba(164,122,51,.46); display:grid; place-items:center; text-align:center; font-size:10px; line-height:1.24; letter-spacing:.08em; text-transform:uppercase; box-shadow:0 0 0 8px rgba(164,122,51,.08)}
+.bridge{max-width:820px; margin:0 auto; padding:18px 28px; background:linear-gradient(180deg,#f3ead7 0%, #ede3cd 100%); border:1px solid #ddd2bc; text-align:center; font-size:16px; line-height:1.68; font-weight:850; color:#363a34}
+.diagnostic-head{display:grid; grid-template-columns:.9fr 1.1fr; gap:36px; align-items:end; margin-bottom:28px}
+.diagnostic-head h1{font-size:49px; max-width:500px}
+.diagnostic-head .lead{margin:0; max-width:540px}
+.lens-layout{display:grid; grid-template-columns:1fr 300px 1fr; gap:18px; align-items:stretch; max-width:980px; margin:0 auto 22px}
+.lens-stack{display:grid; gap:12px}
+.lens-card{
+  background:linear-gradient(180deg,#f4ecda 0%, #eee5d1 100%);
+  border:1px solid var(--line);
+  padding:0;
+  min-height:116px;
+  display:grid;
+  grid-template-columns:96px 1fr;
+  gap:0;
+  align-items:stretch;
+  overflow:hidden;
+}
+.lens-thumb{height:100%; min-height:116px}
+.lens-thumb img{width:100%; height:100%; object-fit:cover; display:block}
+.lens-copy{padding:17px 18px}
+.lens-card h3{margin:0 0 7px; font-size:18px; line-height:1.25; letter-spacing:-.045em}
+.lens-card p{margin:0; color:#666961; font-size:13px; line-height:1.54}
+.lens-num{color:var(--accent); font-size:11px; font-weight:950; letter-spacing:.08em; display:block; margin-bottom:6px}
+.center-lens{
+  background:radial-gradient(circle at 88% 8%, rgba(164,122,51,.13), transparent 32%), linear-gradient(135deg,var(--anchor) 0%, var(--anchor-2) 100%);
+  color:#fff8e8;
+  padding:26px;
+  border:1px solid rgba(21,35,31,.8);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+  min-height:372px;
+}
+.center-lens .caption{color:#d1aa55}
+.center-lens h2{margin:0; font-size:28px; line-height:1.28; letter-spacing:-.05em}
+.center-lens p{margin:18px 0 0; color:#d9dfda; font-size:14px; line-height:1.75}
+.final-script{
+  max-width:920px;
+  margin:0 auto;
+  padding:22px 28px;
+  background:#f3ead7;
+  border:1px solid #ddd2bc;
+  color:#3f433d;
+}
+.final-script .caption{margin-bottom:8px}
+.final-script p{margin:0; font-size:14.5px; line-height:1.78; font-weight:760}
+@media(max-width:940px){
+  .nav,.footer{padding:0 24px}
+  .nav-meta{display:none}
+  .content{padding:42px 24px 52px}
+  h1,.center-page h1,.decision-wrap h1,.split-head h1,.diagnostic-head h1{font-size:38px}
+  .dark-hero{grid-template-columns:1fr; padding:36px 28px}
+  .grid-4,.split-head,.diagnostic-head{grid-template-columns:1fr}
+  .decision-grid,.cobuild-wrap,.lens-layout,.brand-strip{grid-template-columns:1fr}
+  .versus,.bridge-axis{display:none}
+  .journey-visuals{grid-template-columns:1fr}
+  .journey-labels{grid-template-columns:repeat(7,110px); overflow-x:auto; padding-bottom:12px}
+  .journey-labels:before{left:55px; right:auto; width:660px}
+  .page{min-height:auto}
+  .question-box p{font-size:19px}
+  .cobuild-photo-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media print{
+  @page{size:A4; margin:10mm}
+  body{background:#fff}
+  .wrap{width:100%; margin:0}
+  .toolbar{display:none}
+  .page{box-shadow:none; border:1px solid #ddd; border-radius:0; min-height:calc(100vh - 20mm); margin-bottom:0}
+  .page:before{display:none}
+}
+
+/* Page 05 v2 — image-first diagnostic board */
+.diagnostic-v2-head{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:34px;
+  align-items:stretch;
+  margin-bottom:28px;
+}
+.diagnostic-v2-title h1{
+  font-size:48px;
+  max-width:500px;
+}
+.diagnostic-v2-title .lead{
+  max-width:520px;
+}
+.diagnostic-summary{
+  background:
+    radial-gradient(circle at 88% 8%, rgba(164,122,51,.13), transparent 32%),
+    linear-gradient(135deg,var(--anchor) 0%, var(--anchor-2) 100%);
+  color:#fff8e8;
+  border:1px solid rgba(21,35,31,.8);
+  padding:30px 34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:210px;
+}
+.diagnostic-summary .caption{
+  color:#d1aa55;
+}
+.diagnostic-summary h2{
+  margin:0;
+  font-size:30px;
+  line-height:1.3;
+  letter-spacing:-.055em;
+}
+.diagnostic-summary p{
+  margin:16px 0 0;
+  color:#d9dfda;
+  font-size:14.5px;
+  line-height:1.76;
+}
+.lens-board{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  margin:0 auto 24px;
+  max-width:1040px;
+}
+.lens-tile{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,#f4ecda 0%, #eee5d1 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.42);
+  min-height:312px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.lens-tile-image{
+  height:164px;
+  background:#e6dcc8;
+  border-bottom:1px solid rgba(164,122,51,.22);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.lens-tile-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+.lens-tile-image.photo-cover img{
+  object-fit:cover;
+}
+.lens-tile-copy{
+  padding:17px 17px 18px;
+}
+.lens-tile-copy .lens-num{
+  display:block;
+  color:var(--accent);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.08em;
+  margin-bottom:8px;
+}
+.lens-tile-copy h3{
+  margin:0 0 8px;
+  font-size:18px;
+  line-height:1.24;
+  letter-spacing:-.045em;
+}
+.lens-tile-copy p{
+  margin:0;
+  color:#666961;
+  font-size:12.8px;
+  line-height:1.54;
+}
+.final-script.compact{
+  max-width:980px;
+  padding:20px 28px;
+}
+@media(max-width:940px){
+  .diagnostic-v2-head{grid-template-columns:1fr}
+  .diagnostic-v2-title h1{font-size:38px}
+  .lens-board{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .lens-board{grid-template-columns:1fr}
+}
+
+
+/* Page 06 — Quiet Closing */
+.closing-page{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:690px;
+  text-align:center;
+  padding:40px 76px 72px;
+}
+.closing-mark{
+  color:var(--accent);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:950;
+  margin-bottom:34px;
+}
+.closing-sentence{
+  max-width:860px;
+  margin:0 auto;
+  font-size:52px;
+  line-height:1.28;
+  letter-spacing:-.075em;
+  font-weight:950;
+  color:var(--anchor);
+}
+.closing-sentence span{
+  color:var(--accent);
+}
+.closing-sub{
+  margin:38px auto 0;
+  max-width:520px;
+  color:#6b6e66;
+  font-size:13px;
+  line-height:1.72;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  font-weight:850;
+}
+.closing-rule{
+  width:52px;
+  height:1px;
+  background:var(--accent);
+  margin:38px auto 0;
+  opacity:.72;
+}
+@media(max-width:940px){
+  .closing-page{
+    padding:56px 24px 72px;
+    min-height:560px;
+  }
+  .closing-sentence{
+    font-size:36px;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="toolbar">
+      <button class="btn" onclick="window.print()">인쇄 / PDF 저장</button>
+    </div>
+    
+    <section class="page">
+      
+      <header class="nav">
+        <div class="brand">WEPLACE</div>
+        <div class="nav-meta"><span>Premium Dining Surface Brief</span><span>Page 01 · Proof</span></div>
+      </header>
+    
+      <main class="content">
+        <div class="dark-hero">
+          <div class="hero-copy">
+            <div class="caption">Observation · Myeongin</div>
+            <h1>좋은 장면은 이미<br/>존재합니다.</h1>
+            <p class="lead">
+              명인등심은 대표 메뉴와 공간의 감각이 분명한 브랜드입니다.<br/>
+              다만 그 장면이 검색, 예약, 리뷰까지 <span class="gold">하나의 고객 흐름</span>으로 이어지는지는 다시 볼 필요가 있습니다.
+            </p>
+          </div>
+          <div class="image-frame hero-photo">
+            <img class="img" src="cheongdam_assets/myeongin_hero.jpg" alt="명인등심 대표 음식 이미지"/>
+            <div class="img-label">Representative Scene</div>
+          </div>
+        </div>
+        <div class="grid-4">
+          <article class="work-card"><div class="num">01</div><div><h3>대표사진과 첫인상</h3><p>고객이 검색에서 처음 마주하는 장면은 충분히 강합니다. 이 장면을 더 일관되게 연결합니다.</p></div></article>
+          <article class="work-card"><div class="num">02</div><div><h3>공간 사진의 부족</h3><p>실제 공간은 잘 꾸며져 있지만, 온라인에 올라온 장면은 아직 그 감각을 충분히 보여주지 못합니다.</p></div></article>
+          <article class="work-card"><div class="num">03</div><div><h3>메뉴와 선택 구조</h3><p>메뉴판은 정보가 많습니다. 고객이 빠르게 안심하고 고를 수 있는 순서가 중요합니다.</p></div></article>
+          <article class="work-card"><div class="num">04</div><div><h3>예약·리뷰·Google 흐름</h3><p>검색 이후 예약과 리뷰 확인까지 이어지는 동선에서 고객이 멈추는 지점을 확인합니다.</p></div></article>
+        </div>
+        <div class="proof-lane">
+          <div class="proof-step"><div class="proof-dot"></div><span>보이는 장면</span></div>
+          <div class="proof-step"><div class="proof-dot"></div><span>온라인 발견</span></div>
+          <div class="proof-step"><div class="proof-dot"></div><span>예약 판단</span></div>
+          <div class="proof-step"><div class="proof-dot"></div><span>방문·기억</span></div>
+        </div>
+        <p class="note">핵심은 새로 꾸미는 것이 아니라, 이미 있는 좋은 장면이 고객에게 더 정확히 도착하도록 만드는 것입니다.</p>
+      </main>
+      <footer class="footer"><div class="brand-small">WEPLACE</div><div>좋은 장면은 이미 있고, 흐름은 더 정리될 수 있습니다.</div></footer>
+    </section>
+
+    <section class="page">
+      
+      <header class="nav">
+        <div class="brand">WEPLACE</div>
+        <div class="nav-meta"><span>Customer Flow</span><span>Page 02 · Frame</span></div>
+      </header>
+    
+      <main class="content">
+        <div class="center-page">
+          <div class="caption">How We See The Store</div>
+          <h1>우리는 광고보다<br/>선택되는 장면을 만듭니다.</h1>
+          <p class="lead">고객은 사진 하나만 보고 오지 않습니다.<br/>검색에서 예약, 메뉴 선택과 리뷰 확인까지 이어지는 흐름을 따라옵니다.</p>
+          <div class="journey-panel">
+            <div class="journey-visuals">
+              <div class="image-frame journey-visual"><img class="img" src="cheongdam_assets/naver_search.jpg" alt="네이버 검색 화면"/><div class="img-label">Search</div></div>
+              <div class="image-frame journey-visual"><img class="img" src="cheongdam_assets/reservation.jpg" alt="예약 화면"/><div class="img-label">Reservation</div></div>
+              <div class="image-frame journey-visual"><img class="img" src="cheongdam_assets/review.jpg" alt="리뷰 화면"/><div class="img-label">Review</div></div>
+            </div>
+            <div class="journey-labels">
+              <div class="journey-step"><div class="journey-dot"></div><strong>검색</strong><span>첫인상</span></div>
+              <div class="journey-step"><div class="journey-dot"></div><strong>정보 확인</strong><span>안심</span></div>
+              <div class="journey-step"><div class="journey-dot"></div><strong>예약</strong><span>전환</span></div>
+              <div class="journey-step"><div class="journey-dot"></div><strong>메뉴 선택</strong><span>선택 피로 완화</span></div>
+              <div class="journey-step"><div class="journey-dot"></div><strong>결제</strong><span>마찰 감소</span></div>
+              <div class="journey-step"><div class="journey-dot"></div><strong>식사 경험</strong><span>몰입</span></div>
+              <div class="journey-step final"><div class="journey-dot"></div><strong>리뷰·입소문</strong><span>추천 이유</span></div>
+            </div>
+            <div class="journey-arrow">Customer journey moves from attention to memory</div>
+          </div>
+          <p class="philosophy-copy">
+            <strong>Weplace는 보이는 디자인을 대체하지 않습니다.</strong><br/>
+            그 디자인이 고객에게 발견되고, 예약되고,<br/>
+            식사와 대화에 집중되는 흐름까지 이어지도록 설계합니다.
+          </p>
+        </div>
+      </main>
+      <footer class="footer"><div class="brand-small">WEPLACE</div><div>고객은 광고를 보고 오는 것이 아니라, 선택이 쉬운 장면을 따라옵니다.</div></footer>
+    </section>
+
+    <section class="page">
+      
+      <header class="nav">
+        <div class="brand">WEPLACE</div>
+        <div class="nav-meta"><span>Strategic Question</span><span>Page 03 · Question</span></div>
+      </header>
+    
+      <main class="content">
+        <div class="decision-wrap">
+          <div class="caption">Cheongdam Distribution</div>
+          <h1>청담유통은 어떤 방향을<br/>더 중요하게 보고 있나요?</h1>
+          <div class="underline"></div>
+          <div class="decision-grid">
+            <article class="decision-card dark">
+              <div><div class="label">Strategy I</div><h2>체인점 확대</h2></div>
+              <p>지점이 늘어나도 흔들리지 않는 검색·예약·메뉴·결제·응대 기준.</p>
+            </article>
+            <div class="versus">or</div>
+            <article class="decision-card">
+              <div><div class="label">Strategy II</div><h2>브랜드 신뢰 강화</h2></div>
+              <p>더 많은 고객이 지인에게 소개하고 싶어지는 프리미엄 경험의 균일성.</p>
+            </article>
+          </div>
+          <div class="brand-strip">
+            <div class="brand-card"><img src="cheongdam_assets/myeongin_hero.jpg" alt="명인등심"/><span>명인등심</span></div>
+            <div class="brand-card"><img src="cheongdam_assets/orae_google.jpg" alt="오래갈비"/><span>오래갈비</span></div>
+            <div class="brand-card"><img src="cheongdam_assets/mobum_google.jpg" alt="모범갈빗살"/><span>모범갈빗살</span></div>
+          </div>
+          <div class="question-box"><p>“명인등심, 모범갈빗살, 오래갈비는<br/>각각 어떤 고객 경험을 맡아야 할까요?”</p></div>
+          <p class="strategy-note">어느 방향이 더 중요한지에 따라 Weplace가 봐야 할 범위와 가격 구조가 달라집니다.</p>
+        </div>
+      </main>
+      <footer class="footer"><div class="brand-small">WEPLACE</div><div>방향이 정해지면 범위와 가격이 정해집니다.</div></footer>
+    </section>
+
+    <section class="page">
+      
+      <header class="nav">
+        <div class="brand">WEPLACE</div>
+        <div class="nav-meta"><span>Co-Build Structure</span><span>Page 04 · Co-Build</span></div>
+      </header>
+    
+      <main class="content">
+        <div class="split-head">
+          <div><div class="caption">Visible Design · Invisible Flow</div><h1>보이는 디자인과<br/>보이지 않는 흐름</h1></div>
+          <p class="lead">명인등심의 감각을 대체하는 것이 아니라, 그 감각이 더 많은 고객에게 발견되고 예약되고 기억되도록 뒤쪽 구조를 설계합니다.</p>
+        </div>
+        <div class="cobuild-photo-grid">
+          <div class="micro-photo"><img src="cheongdam_assets/space_counter.jpg" alt="공간"/><span>Space</span></div>
+          <div class="micro-photo"><img src="cheongdam_assets/interior_light.jpg" alt="인테리어 디테일"/><span>Detail</span></div>
+          <div class="micro-photo"><img src="cheongdam_assets/menu_cover.jpg" alt="인쇄물"/><span>Print</span></div>
+          <div class="micro-photo"><img src="cheongdam_assets/menu_full.jpg" alt="메뉴판"/><span>Menu</span></div>
+          <div class="micro-photo"><img src="cheongdam_assets/google_myeongin.jpg" alt="Google Business Profile"/><span>Google</span></div>
+        </div>
+        <div class="cobuild-wrap">
+          <article class="column-card">
+            <div class="label">Designer / Brand Side</div>
+            <h2>보이는 디자인</h2>
+            <div class="list">
+              <div class="list-item"><span class="bullet"></span><span>공간의 격과 매장 분위기</span></div>
+              <div class="list-item"><span class="bullet"></span><span>대표사진과 메뉴 이미지의 인상</span></div>
+              <div class="list-item"><span class="bullet"></span><span>메뉴판, 인쇄물, 시각적 일관성</span></div>
+              <div class="list-item"><span class="bullet"></span><span>고객이 첫눈에 느끼는 프리미엄</span></div>
+              <div class="list-item"><span class="bullet"></span><span>브랜드가 스스로 지키고 싶은 미감</span></div>
+            </div>
+          </article>
+          <div class="bridge-axis"><div class="line"></div><div class="circle">Connect<br/>to<br/>Action</div><div class="line"></div></div>
+          <article class="column-card dark">
+            <div class="label">Weplace / Backend Side</div>
+            <h2>보이지 않는 흐름</h2>
+            <div class="list">
+              <div class="list-item"><span class="bullet"></span><span>검색어, Google, GEO 정보 구조</span></div>
+              <div class="list-item"><span class="bullet"></span><span>클릭 이후 예약으로 이어지는 흐름</span></div>
+              <div class="list-item"><span class="bullet"></span><span>메뉴 선택과 가격 구조의 심리 설계</span></div>
+              <div class="list-item"><span class="bullet"></span><span>결제 과정에서 식사 흐름이 끊기지 않는 구조</span></div>
+              <div class="list-item"><span class="bullet"></span><span>리뷰와 입소문으로 남는 기억 포인트</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="bridge">디자인은 고객을 멈추게 하고, 보이지 않는 흐름은 고객이 망설이지 않게 합니다.</div>
+      </main>
+      <footer class="footer"><div class="brand-small">WEPLACE</div><div>디자인을 대체하지 않고, 디자인이 도착하는 길을 만듭니다.</div></footer>
+    </section>
+
+    <section class="page">
+
+      <header class="nav">
+        <div class="brand">WEPLACE</div>
+        <div class="nav-meta"><span>Diagnostic Scope</span><span>Page 05 · Observe</span></div>
+      </header>
+
+      <main class="content">
+        <div class="diagnostic-v2-head">
+          <div class="diagnostic-v2-title">
+            <div class="caption">First, We Observe</div>
+            <h1>처음부터 바꾸기보다,<br/>먼저 확인할 것</h1>
+            <p class="lead">
+              실행보다 먼저 고객이 어디서 안심하고, 어디서 망설이며, 어떤 장면을 기억하는지 확인합니다.
+            </p>
+          </div>
+
+          <div class="diagnostic-summary">
+            <div class="caption">Diagnostic Lens</div>
+            <h2>고객이 어디서 멈추고,<br/>어디서 안심하며,<br/>무엇을 기억하는지 봅니다.</h2>
+            <p>
+              한 번 평가하고 끝내는 방식이 아니라, 발견·예약·선택·결제·경험·입소문까지 이어지는 흐름을 확인합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="lens-board">
+          <article class="lens-tile">
+            <div class="lens-tile-image">
+              <img src="cheongdam_assets/reservation.jpg" alt="예약 화면"/>
+            </div>
+            <div class="lens-tile-copy">
+              <span class="lens-num">01</span>
+              <h3>예약 전 망설임</h3>
+              <p>좌석지정 불가, 전화 문의 안내 등에서 고객이 멈추는 지점을 봅니다.</p>
+            </div>
+          </article>
+
+          <article class="lens-tile">
+            <div class="lens-tile-image">
+              <img src="cheongdam_assets/menu_close.jpg" alt="메뉴 선택 구조"/>
+            </div>
+            <div class="lens-tile-copy">
+              <span class="lens-num">02</span>
+              <h3>메뉴 선택 부담</h3>
+              <p>가격, 대표 메뉴, 점심 특선, 외국어 표기가 쉽게 선택되는지 봅니다.</p>
+            </div>
+          </article>
+
+          <article class="lens-tile">
+            <div class="lens-tile-image">
+              <img src="cheongdam_assets/menu_full.jpg" alt="메뉴판 전체"/>
+            </div>
+            <div class="lens-tile-copy">
+              <span class="lens-num">03</span>
+              <h3>결제 흐름의 마찰</h3>
+              <p>선택과 결제 과정에서 식사 흐름이 불필요하게 끊기지 않는지 봅니다.</p>
+            </div>
+          </article>
+
+          <article class="lens-tile">
+            <div class="lens-tile-image photo-cover">
+              <img src="cheongdam_assets/space_hall.jpg" alt="공간과 응대 톤"/>
+            </div>
+            <div class="lens-tile-copy">
+              <span class="lens-num">04</span>
+              <h3>지점별 응대 톤</h3>
+              <p>공간의 고급감과 말투, 안내 방식, 운영 언어가 일치하는지 봅니다.</p>
+            </div>
+          </article>
+
+          <article class="lens-tile">
+            <div class="lens-tile-image">
+              <img src="cheongdam_assets/review.jpg" alt="리뷰 화면"/>
+            </div>
+            <div class="lens-tile-copy">
+              <span class="lens-num">05</span>
+              <h3>리뷰·입소문 기억</h3>
+              <p>좋은 경험이 지인에게 소개하고 싶은 이유로 남는지 정리합니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="final-script compact">
+          <div class="caption">Closing Script</div>
+          <p>
+            오늘은 해법을 모두 정해오지 않았습니다. 청담유통이 어떤 방향을 더 중요하게 보고 있는지 먼저 듣고, 그 방향에 맞춰 명인등심·모범갈빗살·오래갈비의 고객 흐름을 함께 정리해보고 싶습니다.
+          </p>
+        </div>
+      </main>
+      <footer class="footer"><div class="brand-small">WEPLACE</div><div>먼저 바꾸지 않고, 먼저 봅니다.</div></footer>
+    </section>
+
+    <section class="page">
+      <header class="nav">
+        <div class="brand">WEPLACE</div>
+        <div class="nav-meta"><span>Closing</span><span>Page 06 · Commitment</span></div>
+      </header>
+
+      <main class="content closing-page">
+        <div class="closing-mark">First Diagnostic Step</div>
+        <div class="closing-sentence">
+          좋은 장면은 이미 있습니다.<br/>
+          이제 고객이 그 장면까지<br/>
+          <span>망설임 없이 도착하게</span> 만들겠습니다.
+        </div>
+        <div class="closing-rule"></div>
+        <div class="closing-sub">WEPLACE · Premium Dining Surface Partner</div>
+      </main>
+
+      <footer class="footer">
+        <div class="brand-small">WEPLACE</div>
+        <div>Good scenes already exist. We design the path that brings customers there.</div>
+      </footer>
+    </section>
+
+  </div>
+</body>
+</html>
