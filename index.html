@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>청담유통 × We,Place. 6개월 프로젝트 </title>
+  <title>WEPLACE × 청담유통 백업용 6P 경험정렬본</title>
   <style>
 :root{
-  --outer:#202521;
-  --outer-dot:rgba(255,255,255,.15);
-  --field:#fbf5e6;
-  --field-2:#fff8e9;
-  --surface:#eae2cf;
-  --surface-2:#f2ead8;
-  --anchor:#15231f;
-  --anchor-2:#1d2c27;
-  --anchor-soft:#53625b;
+  --outer:#20251f;
+  --outer-dot:rgba(255,248,232,.055);
+  --field:#fbf4e3;
+  --field-2:#fff9ea;
+  --surface:#f3e8d4;
+  --surface-2:#eadcc3;
+  --anchor:#14231f;
+  --anchor-2:#24362f;
+  --anchor-soft:#56635c;
   --accent:#a47a33;
-  --accent-soft:#c4a263;
-  --ink:#151914;
-  --muted:#6e7168;
-  --line:#ded4bf;
-  --shadow:0 28px 80px rgba(0,0,0,.32);
-  --radius:12px;
+  --accent-soft:#c6a05c;
+  --ink:#171b15;
+  --muted:#62665d;
+  --line:#d9cab2;
+  --shadow:0 34px 110px rgba(0,0,0,.30);
+  --radius:24px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -444,6 +444,75 @@ h1{
 }
 .final-script .caption{margin-bottom:8px}
 .final-script p{margin:0; font-size:14.5px; line-height:1.78; font-weight:760}
+
+
+/* Unified Flow Layer · onsite 기준 색상 + 호기심→자기점검→행동 */
+.flow-cue{
+  max-width:980px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin:0 auto 26px;
+}
+.cue-card{
+  background:rgba(255,249,234,.72);
+  border:1px solid rgba(217,202,178,.92);
+  padding:20px 22px;
+  box-shadow:0 12px 28px rgba(20,35,31,.045);
+}
+.cue-card.dark{
+  background:linear-gradient(135deg,var(--anchor) 0%,var(--anchor-2) 100%);
+  color:#fff8e8;
+  border-color:rgba(20,35,31,.92);
+}
+.cue-label{
+  color:var(--accent);
+  font-size:10.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:950;
+  margin-bottom:9px;
+}
+.cue-card.dark .cue-label{color:var(--accent-soft)}
+.cue-card strong{
+  display:block;
+  color:#202a24;
+  font-size:17px;
+  line-height:1.36;
+  letter-spacing:-.052em;
+  font-weight:950;
+}
+.cue-card.dark strong{color:#fff8e8}
+.cue-card p{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.66;
+  font-weight:720;
+}
+.cue-card.dark p{color:#dbe2dc}
+.next-action-box{
+  max-width:920px;
+  margin:20px auto 0;
+  padding:18px 24px;
+  border:1px solid rgba(164,122,51,.36);
+  background:rgba(255,249,234,.74);
+  color:#40483f;
+  font-size:14px;
+  line-height:1.72;
+  font-weight:760;
+  text-align:center;
+}
+.next-action-box strong{color:var(--anchor)}
+.page{
+  border-color:rgba(217,202,178,.94);
+  background:
+    radial-gradient(circle at 88% 6%, rgba(164,122,51,.075), transparent 30%),
+    linear-gradient(180deg,var(--field) 0%, var(--field-2) 100%);
+}
+.footer{background:var(--anchor-soft)}
+.btn{color:var(--field)}
+
 @media(max-width:940px){
   .nav,.footer{padding:0 24px}
   .nav-meta{display:none}
@@ -893,16 +962,6 @@ h1{
 .page:last-of-type .page-next{
   display:none;
 }
-
-.slide-btn.fullscreen{
-  min-width:106px;
-  background:rgba(209,170,85,.16);
-  border-color:rgba(209,170,85,.38);
-}
-.slide-btn.fullscreen:hover{
-  background:rgba(209,170,85,.30);
-}
-
 @media(max-width:940px){
   .slide-controls{
     right:14px;
@@ -947,7 +1006,7 @@ h1{
             <h1>좋은 장면은 이미<br/>존재합니다.</h1>
             <p class="lead">
               명인등심은 대표 메뉴와 공간의 감각이 분명한 브랜드입니다.<br/>
-              다만 그 장면이 검색, 예약, 리뷰까지 <span class="gold">하나의 고객 흐름</span>으로 이어지는지는 다시 볼 필요가 있습니다.
+              이제는 그 장면이 어느 지점에서도 같은 만족으로 느껴지도록, 검색·예약·리뷰까지 <span class="gold">하나의 고객 흐름</span>으로 이어지는지 볼 시점입니다.
             </p>
           </div>
           <div class="image-frame hero-photo">
@@ -955,11 +1014,29 @@ h1{
             <div class="img-label">Representative Scene</div>
           </div>
         </div>
+
+        <div class="flow-cue">
+          <article class="cue-card dark">
+            <div class="cue-label">Curiosity</div>
+            <strong>좋은 장면은 고객에게 어디까지 도착하고 있나요?</strong>
+            <p>현장 안의 장면과 검색 화면의 첫인상이 같은 온도로 이어지는지 봅니다.</p>
+          </article>
+          <article class="cue-card">
+            <div class="cue-label">Self Check</div>
+            <strong>고객은 어느 화면에서 망설일까요?</strong>
+            <p>사진, 메뉴, 예약, 리뷰 중 고객이 다시 확인하게 되는 지점을 찾습니다.</p>
+          </article>
+          <article class="cue-card">
+            <div class="cue-label">Action</div>
+            <strong>오늘 확인한 기준을 체크합니다.</strong>
+            <p>발견한 지점을 onsite 체크 폼에 남겨 다음 실행 범위로 연결합니다.</p>
+          </article>
+        </div>
         <div class="grid-4">
           <article class="work-card"><div class="num">01</div><div><h3>대표사진과 첫인상</h3><p>고객이 검색에서 처음 마주하는 장면은 충분히 강합니다. 이 장면을 더 일관되게 연결합니다.</p></div></article>
           <article class="work-card"><div class="num">02</div><div><h3>공간 사진의 부족</h3><p>실제 공간은 잘 꾸며져 있지만, 온라인에 올라온 장면은 아직 그 감각을 충분히 보여주지 못합니다.</p></div></article>
           <article class="work-card"><div class="num">03</div><div><h3>메뉴와 선택 구조</h3><p>메뉴판은 정보가 많습니다. 고객이 빠르게 안심하고 고를 수 있는 순서가 중요합니다.</p></div></article>
-          <article class="work-card"><div class="num">04</div><div><h3>예약·리뷰·Google 흐름</h3><p>검색 이후 예약과 리뷰 확인까지 이어지는 동선에서 고객이 멈추는 지점을 확인합니다.</p></div></article>
+          <article class="work-card"><div class="num">04</div><div><h3>좌석·예약 안내의 온도</h3><p>좌석 지정, 룸 요청, 예약 마감 안내가 제약으로 보이는지 안심으로 보이는지 확인합니다.</p></div></article>
         </div>
         <div class="proof-lane">
           <div class="proof-step"><div class="proof-dot"></div><span>보이는 장면</span></div>
@@ -967,7 +1044,7 @@ h1{
           <div class="proof-step"><div class="proof-dot"></div><span>예약 판단</span></div>
           <div class="proof-step"><div class="proof-dot"></div><span>방문·기억</span></div>
         </div>
-        <p class="note">핵심은 새로 꾸미는 것이 아니라, 이미 있는 좋은 장면이 고객에게 더 정확히 도착하도록 만드는 것입니다.</p>
+        <p class="note">핵심은 이미 있는 좋은 장면이 고객에게 더 정확히 도착하도록, 먼저 어디서 멈추는지 함께 확인하는 것입니다.</p>
       </main>
       <footer class="footer"><div class="brand-small">WEPLACE</div><div>좋은 장면은 이미 있고, 흐름은 더 정리될 수 있습니다.</div></footer>
     </section>
@@ -1021,17 +1098,17 @@ h1{
       <main class="content">
         <div class="decision-wrap">
           <div class="caption">Cheongdam Distribution</div>
-          <h1>청담유통은 어떤 방향을<br/>더 중요하게 보고 있나요?</h1>
+          <h1>청담유통이 원하는 미래는<br/>같은 만족의 기준입니다.</h1>
           <div class="underline"></div>
           <div class="decision-grid">
             <article class="decision-card dark">
-              <div><div class="label">Strategy I</div><h2>체인점 확대</h2></div>
-              <p>지점이 늘어나도 흔들리지 않는 검색·예약·메뉴·결제·응대 기준.</p>
+              <div><div class="label">Current Gap</div><h2>지점마다 다르게 보이는 장면</h2></div>
+              <p>사진, 예약 안내, 좌석 요청, 리뷰 응답이 다르게 보이면 고객은 다시 비교합니다.</p>
             </article>
-            <div class="versus">or</div>
+            <div class="versus">to</div>
             <article class="decision-card">
-              <div><div class="label">Strategy II</div><h2>브랜드 신뢰 강화</h2></div>
-              <p>더 많은 고객이 지인에게 소개하고 싶어지는 프리미엄 경험의 균일성.</p>
+              <div><div class="label">Next Standard</div><h2>어느 지점에서도 같은 만족</h2></div>
+              <p>고객이 어느 직영점을 예약해도 같은 신뢰와 기대를 갖도록 기준을 맞춥니다.</p>
             </article>
           </div>
           <div class="brand-strip">
@@ -1039,11 +1116,11 @@ h1{
             <div class="brand-card"><img src="cheongdam_assets/orae_google.jpg" alt="오래갈비"/><span>오래갈비</span></div>
             <div class="brand-card"><img src="cheongdam_assets/mobum_google.jpg" alt="모범갈빗살"/><span>모범갈빗살</span></div>
           </div>
-          <div class="question-box"><p>“명인등심, 모범갈빗살, 오래갈비는<br/>각각 어떤 고객 경험을 맡아야 할까요?”</p></div>
-          <p class="strategy-note">어느 방향이 더 중요한지에 따라 Weplace가 봐야 할 범위와 가격 구조가 달라집니다.</p>
+          <div class="question-box"><p>“오늘 먼저 맞출 기준은 무엇일까요?<br/>좌석 안내, 예약 마감 대안, 지점별 역할 중 어디부터 볼까요?”</p></div>
+          <p class="strategy-note">어느 방향이 더 중요한지에 따라 먼저 볼 범위와 실행 순서가 달라집니다.</p>
         </div>
       </main>
-      <footer class="footer"><div class="brand-small">WEPLACE</div><div>방향이 정해지면 범위와 가격이 정해집니다.</div></footer>
+      <footer class="footer"><div class="brand-small">WEPLACE</div><div>기준이 정해지면 범위와 행동이 정해집니다.</div></footer>
     </section>
 
     <section class="page">
@@ -1129,7 +1206,7 @@ h1{
             <div class="lens-tile-copy">
               <span class="lens-num">01</span>
               <h3>예약 전 망설임</h3>
-              <p>좌석지정 불가, 전화 문의 안내 등에서 고객이 멈추는 지점을 봅니다.</p>
+              <p>좌석지정 불가, 룸 요청, 전화 문의 안내가 고객에게 제약으로 보이는지 안심으로 보이는지 봅니다.</p>
             </div>
           </article>
 
@@ -1150,8 +1227,8 @@ h1{
             </div>
             <div class="lens-tile-copy">
               <span class="lens-num">03</span>
-              <h3>결제 흐름의 마찰</h3>
-              <p>선택과 결제 과정에서 식사 흐름이 불필요하게 끊기지 않는지 봅니다.</p>
+              <h3>예약 마감의 다음 동선</h3>
+              <p>예약 마감 이후 다른 날짜, 다른 지점, 전화 문의로 자연스럽게 이어지는지 봅니다.</p>
             </div>
           </article>
 
@@ -1181,9 +1258,10 @@ h1{
         <div class="final-script compact">
           <div class="caption">Closing Script</div>
           <p>
-            오늘은 해법을 모두 정해오지 않았습니다. 청담유통이 어떤 방향을 더 중요하게 보고 있는지 먼저 듣고, 그 방향에 맞춰 명인등심·모범갈빗살·오래갈비의 고객 흐름을 함께 정리해보고 싶습니다.
+            오늘은 먼저 확인할 기준을 함께 맞춥니다. 현장에서 보인 망설임과 안심 지점을 체크해두면, 이후 명인등심·모범갈빗살·오래갈비의 고객 흐름을 더 정확한 순서로 정리할 수 있습니다.
           </p>
         </div>
+        <div class="next-action-box"><strong>다음 액션:</strong> onsite 체크 폼에서 진행 범위·고객 화면·내부 반복 업무를 표시하고, 선택된 항목을 기준으로 후속 제안 범위를 확정합니다.</div>
       </main>
       <footer class="footer"><div class="brand-small">WEPLACE</div><div>먼저 바꾸지 않고, 먼저 봅니다.</div></footer>
     </section>
@@ -1198,8 +1276,8 @@ h1{
         <div class="closing-mark">First Diagnostic Step</div>
         <div class="closing-sentence">
           좋은 장면은 이미 있습니다.<br/>
-          이제 고객이 그 장면까지<br/>
-          <span>망설임 없이 도착하게</span> 만들겠습니다.
+          이제 어느 지점에서도<br/>
+          <span>같은 만족으로 도착하게</span> 만들겠습니다.
         </div>
         <div class="closing-rule"></div>
         <div class="closing-sub">WEPLACE · Premium Dining Surface Partner</div>
@@ -1207,7 +1285,7 @@ h1{
 
       <footer class="footer">
         <div class="brand-small">WEPLACE</div>
-        <div>Good scenes already exist. We design the path that brings customers there.</div>
+        <div>Good scenes already exist. We align the path to the same satisfaction.</div>
       </footer>
     </section>
 
